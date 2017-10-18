@@ -14,13 +14,7 @@ public class MergeTwoSortedLists {
 	 * 
 	 */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode first = l1;
-        while (l1 != null) {
-        	l1 = l1.next;
-        }
-        l1 = l2;
-        // buff sort
-        
+    	// 1. еп╤о
         return null;
     }
     
