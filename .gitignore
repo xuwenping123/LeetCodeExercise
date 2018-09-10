@@ -1,6 +1,9 @@
 # file
 *.class
 *.iml
+*.classpath
+*.project
 
 # directory
 .idea/
+.settings/

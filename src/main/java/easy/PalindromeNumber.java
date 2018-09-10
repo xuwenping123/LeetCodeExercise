@@ -13,8 +13,6 @@ public class PalindromeNumber {
 	/**
 	 * right 
 	 *
-	 * 获取数字，然后组成list
-	 * 对list 前后遍历
 	 */
     public boolean isPalindrome(int x) {
 		if (x == 0) {
@@ -23,7 +21,7 @@ public class PalindromeNumber {
 		if (x < 0 || x % 10 == 0) {
 			return false;
 		}
-		List<Integer> list = new ArrayList<>();
+		List<Integer> list = new ArrayList<Integer>();
 		list.add(x % 10);
 		while ( x / 10 > 0 ) {
 			x = x / 10;

@@ -14,10 +14,9 @@ public class ReverseInteger {
 	/**
 	 * right
 	 * 
-	 * ²ð½â×Ö·û³ÉÊý×é£¬·´Ïò±éÀúÊý×é
 	 */
 	public int reverse(int x) {
-        boolean flag = x >= 0;//¼ÇÂ¼¸ÃÊýÕý¸º£¬ÈôÕý£¬true, else false
+        boolean flag = x >= 0;//ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½true, else false
         StringBuilder sb = new StringBuilder();
         String str = x + "";
         char[] chars = str.toCharArray();
@@ -50,8 +49,7 @@ public class ReverseInteger {
 	 * 
 	 * use stack
 	 * 
-	 * ³ý10 È¡Êý×Ö
-	 *  
+	 *
 	 */
 	public int reverse2(int x) {
 		int flag = x > 0 ? 1 : -1;
@@ -59,7 +57,7 @@ public class ReverseInteger {
 		if (x <= 0) {
 			return 0;
 		}
-		Stack<Integer> stack = new Stack<>();
+		Stack<Integer> stack = new Stack<Integer>();
 		int digit;
 		int i = 10;
 		long value = 0l;

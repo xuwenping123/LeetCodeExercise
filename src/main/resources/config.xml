@@ -1,0 +1,7 @@
+<Mappers>
+    <Mapper>
+        <order>1</order>
+        <name>Two Sum</name>
+        <class>easy.TwoSum</class>
+    </Mapper>
+</Mappers>
