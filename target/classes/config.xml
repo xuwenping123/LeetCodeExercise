@@ -4,4 +4,9 @@
         <name>Two Sum</name>
         <class>easy.TwoSum</class>
     </Mapper>
+    <Mapper>
+        <order>2</order>
+        <name>Add Two Numbers</name>
+        <class>medium.AddTwoNumbers</class>
+    </Mapper>
 </Mappers>
