@@ -25,6 +25,12 @@ public class AddTwoNumbers {
 
     }
 
+    /**
+     * 使用到了归并排序关于两个数组合并成一个数组的思想
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode solve(ListNode l1, ListNode l2) {
         ListNode node = l1;
         ListNode temp = l1;

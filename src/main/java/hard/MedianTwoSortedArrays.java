@@ -23,7 +23,13 @@ package hard;
  */
 public class MedianTwoSortedArrays {
 
-
+    /**
+     * O(n)
+     * 使用了归并排序中关于两个数组合并成一个数组的思想
+     * @param nums1
+     * @param nums2
+     * @return
+     */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         boolean flag = (nums1.length + nums2.length) % 2 != 0;
         int temp = (nums1.length + nums2.length) / 2 + 1;
