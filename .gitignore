@@ -7,4 +7,4 @@
 # directory
 .idea/
 .settings/
-target/
+target/*
