@@ -12,6 +12,11 @@
     <Mapper>
         <order>3</order>
         <name>Longest Substring Without Repeating Characters</name>
-        <class>LongestSubstring</class>
+        <class>medium.LongestSubstring</class>
+    </Mapper>
+    <Mapper>
+        <order>4</order>
+        <name>Median of Two Sorted Arrays</name>
+        <class>hard.MedianTwoSortedArrays</class>
     </Mapper>
 </Mappers>
