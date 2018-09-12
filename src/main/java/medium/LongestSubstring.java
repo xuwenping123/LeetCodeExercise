@@ -26,6 +26,7 @@ public class LongestSubstring {
 
     /**
      * 使用数组作为中间存储介质
+     *
      * @param s
      * @return
      */
@@ -53,6 +54,48 @@ public class LongestSubstring {
             }
         }
         subCount = subCount < list.size() ? list.size() : subCount;
+        return subCount;
+    }
+
+    /**
+     * 使用一前一后两枚指针进行数组遍历
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstringPos(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        if (s.length() == 1) {
+            return 1;
+        }
+        int fast = 0;
+        int low = 0;
+        int subCount = 0;
+        char[] chars = s.toCharArray();
+        int temp;
+        boolean flag = false;
+        while(fast < chars.length) {
+            if (fast > 0) {
+                for (temp = low; temp < fast; temp++) {
+                    if (chars[temp] == chars[fast]) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag) {
+                    subCount = subCount < fast - low ? fast - low : subCount;
+                    low = temp + 1;
+                    fast++;
+                } else {
+                    fast++;
+                }
+            } else {
+                fast++;
+            }
+            flag = false;
+        }
+        subCount = subCount < fast - low ? fast - low : subCount;
         return subCount;
     }
 }
