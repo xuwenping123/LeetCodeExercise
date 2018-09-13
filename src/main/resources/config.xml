@@ -19,4 +19,9 @@
         <name>Median of Two Sorted Arrays</name>
         <class>hard.MedianTwoSortedArrays</class>
     </Mapper>
+    <Mapper>
+        <order>5</order>
+        <name>Longest Palindromic Substring</name>
+        <class>medium.LongestPalSubString</class>
+    </Mapper>
 </Mappers>
