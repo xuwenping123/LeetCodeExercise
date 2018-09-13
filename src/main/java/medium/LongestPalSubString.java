@@ -17,6 +17,11 @@ package medium;
  */
 public class LongestPalSubString {
 
+    /**
+     * 使用一前一后指针进行遍历，进行暴力破解
+     * @param s
+     * @return
+     */
     public String longestPalindrome(String s) {
         if (s == null) {
             return null;
