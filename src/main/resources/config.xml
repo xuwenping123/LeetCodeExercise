@@ -24,4 +24,9 @@
         <name>Longest Palindromic Substring</name>
         <class>medium.LongestPalSubString</class>
     </Mapper>
+    <Mapper>
+        <order>6</order>
+        <name>ZigZag Conversion</name>
+        <class>medium.ZigZagConversion</class>
+    </Mapper>
 </Mappers>
