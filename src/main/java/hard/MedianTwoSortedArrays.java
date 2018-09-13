@@ -59,4 +59,10 @@ public class MedianTwoSortedArrays {
             return (double) (array[temp - 1] + array[temp - 2]) / 2;
         }
     }
+
+
+    //TODO
+    /**
+     * O(lg(m+n))
+     */
 }
