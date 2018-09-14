@@ -31,38 +31,30 @@ package medium;
 public class ZigZagConversion {
 
     /**
-     *
+     * 寻找规律
      * @param s
      * @param numRows
      * @return
      */
     public String convert(String s, int numRows) {
-
-        /**
-         *  to do list
-         */
-        // TODO
-        return null;
-    }
-}
-/*
-        if (s == null || s.length() <= 1) {
-            return s;
-        }
         char[] chars = s.toCharArray();
         char[] newChars = new char[chars.length];
         int pos = 0;
         int index;
-        int multi;
+        int temp;
         for (int i = 0; i < numRows; i++) {
             index = i;
-            while(index < chars.length) {
-                if (true) {
-                    newChars[pos++] = chars[index - i - 1];
-                }
+            while (index < chars.length) {
                 newChars[pos++] = chars[index];
-                index = index + 2 * (numRows - 1);
+                if (i == 0 || i == (numRows - 1)) {
+                    index = index + 2 * (numRows - 1);
+                } else {
+                    temp = index + 2 * (numRows - 1);
+                    index = temp - index - i;
+                }
             }
         }
-        return new String(newChars);
- */
+        String str = new String(newChars);
+        return str;
+    }
+}
