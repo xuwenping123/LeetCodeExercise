@@ -32,6 +32,9 @@ public class ZigZagConversion {
 
     /**
      * 寻找规律
+     *  1. 两侧  pos = index + 2 * (numRows - 1)    index 表示所在原数组下标
+     *  2. 中间  pos =  index + 2 * (numRows - 1) - i - i     i表示所在行， index + 2 * (numRows - 1) 表示中间元素所在下一侧同行元素
+     *      pos 表示新生成数组下标
      * @param s
      * @param numRows
      * @return
