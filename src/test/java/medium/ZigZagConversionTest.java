@@ -27,4 +27,11 @@ public class ZigZagConversionTest {
         int numRows = 3;
         Assert.assertEquals("0413526", conversion.convert(str, numRows));
     }
+
+    @Test
+    public void testDemo4String() {
+        String str = "0123456";
+        int numRows = 4;
+        Assert.assertEquals("0615243", conversion.convert(str, numRows));
+    }
 }

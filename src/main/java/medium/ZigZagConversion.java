@@ -37,24 +37,34 @@ public class ZigZagConversion {
      * @return
      */
     public String convert(String s, int numRows) {
+        if (s == null || s.length() == 0 || s.length() == 1) {
+            return s;
+        }
         char[] chars = s.toCharArray();
         char[] newChars = new char[chars.length];
         int pos = 0;
         int index;
         int temp;
+        boolean flag;
         for (int i = 0; i < numRows; i++) {
             index = i;
+            temp = i;
+            flag = true;
             while (index < chars.length) {
                 newChars[pos++] = chars[index];
-                if (i == 0 || i == (numRows - 1)) {
+                if (i == 0 || i == numRows - 1) {
                     index = index + 2 * (numRows - 1);
                 } else {
-                    temp = index + 2 * (numRows - 1);
-                    index = temp - index - i;
+                    flag = !flag;
+                    if (flag) {
+                        index = temp;
+                    } else {
+                        temp = temp + 2 * (numRows - 1);
+                        index = temp - i - i;
+                    }
                 }
             }
         }
-        String str = new String(newChars);
-        return str;
+        return new String(newChars);
     }
 }
