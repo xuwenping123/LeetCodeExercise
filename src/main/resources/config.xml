@@ -29,4 +29,8 @@
         <name>ZigZag Conversion</name>
         <class>medium.ZigZagConversion</class>
     </Mapper>
+    <Mapper>
+        <order>7</order>
+        <name>Reverse Integer</name>
+    </Mapper>
 </Mappers>

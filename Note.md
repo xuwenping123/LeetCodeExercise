@@ -31,6 +31,12 @@
     medium.AddTwoNumbers
     hard.MedianTwoSortedArrays
     ```
+3. 寻找规律
+    基于示例及类推寻找规律
+    如：
+    ```
+    medium.ZigZagConversion
+    ```
 
 ### 算法
 
