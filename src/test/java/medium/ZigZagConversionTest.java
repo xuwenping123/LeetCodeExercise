@@ -30,8 +30,15 @@ public class ZigZagConversionTest {
 
     @Test
     public void testDemo4String() {
-        String str = "0123456";
+        String str = "012345678";
         int numRows = 4;
-        Assert.assertEquals("0615243", conversion.convert(str, numRows));
+        Assert.assertEquals("061572483", conversion.convert(str, numRows));
+    }
+
+    @Test
+    public void testDemo5String() {
+        String str = "0123456789A";
+        int numRows = 4;
+        Assert.assertEquals("06157248A39", conversion.convert(str, numRows));
     }
 }
