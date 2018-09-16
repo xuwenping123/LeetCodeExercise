@@ -37,7 +37,7 @@ public class ZigZagConversion {
      * @return
      */
     public String convert(String s, int numRows) {
-        if (s == null || s.length() == 0 || s.length() == 1) {
+        if (s == null || s.length() == 0 || s.length() == 1 || s.length() == 2 || numRows == 1) {
             return s;
         }
         char[] chars = s.toCharArray();

@@ -7,6 +7,16 @@ public class ZigZagConversionTest {
 
     private ZigZagConversion conversion = new ZigZagConversion();
 
+    /**
+     * numRows != 1
+     */
+    @Test
+    public void testLong2String() {
+        String str = "01";
+        int numRows = 1;
+        Assert.assertEquals("01", conversion.convert(str, numRows));
+    }
+
     @Test
     public void testDemoString() {
         String str = "PAYPALISHIRING";
