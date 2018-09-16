@@ -91,7 +91,7 @@ public class ReverseInteger {
 	}
 
 	/**
-	 *
+	 * O(1)
 	 * add 18-09-16
 	 * @param x
 	 * @return

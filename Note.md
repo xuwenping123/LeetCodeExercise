@@ -2,8 +2,31 @@
 ---
 ### 常用结论
 
-1. 有序数组长度为length (length > 0)，length为奇数时，数组中位数为索引 (length >> 1 + 1)数组值, length为偶数时，数组中位数为索引 length >> 1 与 length >> 1 + 1 数组值的中位数
-2. 
+1. 有序数组中位数
+    ```
+    /* 
+     *有序数组长度为length (length > 0)
+     * length为奇数时，数组中位数为索引 (length >> 1 + 1)数组值, 
+     * length为偶数时，数组中位数为索引 length >> 1 与 length >> 1 + 1 数组值的中位数
+     */
+    if (array.length / 2 == 0) {
+        return (array[array.length / 2] + array[array.length / 2 + 1]) / 2;
+    } else{
+        return array[array.length / 2];
+    }
+    ```
+ 
+2. 整数位值获取
+    ```
+    /*
+     * 整数除以10取余，余数即为最小为数值
+     */
+    while (x > 0) {
+        remainder = x % 10;
+        x = x / 10;
+    }
+    ```
+
 
 ### 数据结构
 1. 数组
