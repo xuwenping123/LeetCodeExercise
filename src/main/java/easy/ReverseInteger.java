@@ -99,11 +99,27 @@ public class ReverseInteger {
 	public int reverse3(int x) {
 		// if x >= 0 , flag = true ; else flag = false;
 		boolean flag = x >= 0;
-		Stack<Integer> stack = new Stack<Integer>();
-		while (x >= 10) {
-			stack.push(x % 10);
+		if (!flag) {
+			x *= (-1);
 		}
-		return 0;
+		int value = 0;
+		int remainder;
+		int n = 0;
+		int temp = x;
+		while (temp > 0) {
+			temp = temp / 10;
+			n++;
+		}
+		while (x > 0) {
+			remainder = x % 10;
+			if (flag) {
+				value = value + remainder * (int) Math.pow(10, --n);
+			} else {
+				value = value - remainder * (int) Math.pow(10, --n);
+			}
+			x = x / 10;
+		}
+		return value;
 	}
 
 }

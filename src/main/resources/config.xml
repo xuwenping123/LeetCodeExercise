@@ -32,5 +32,6 @@
     <Mapper>
         <order>7</order>
         <name>Reverse Integer</name>
+        <class>easy.ReverseInteger</class>
     </Mapper>
 </Mappers>
