@@ -60,6 +60,13 @@
     ```
     medium.ZigZagConversion
     ```
+4. 值域越界
+    值不断叠加出现越界情况，使用比需求值域大的类型存放该值，
+    每次叠加过程中，判断值是否越过界
+    如：
+    ```
+    medium.StringConverInteger
+    ```    
 
 ### 算法
 

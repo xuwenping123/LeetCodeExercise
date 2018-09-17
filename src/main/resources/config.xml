@@ -34,4 +34,9 @@
         <name>Reverse Integer</name>
         <class>easy.ReverseInteger</class>
     </Mapper>
+    <Mapper>
+        <order>8</order>
+        <name>String to Integer (atoi)</name>
+        <class>medium.StringConverInteger</class>
+    </Mapper>
 </Mappers>
