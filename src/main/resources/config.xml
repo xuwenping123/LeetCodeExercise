@@ -44,4 +44,9 @@
         <name>Palindrome Number</name>
         <class>easy.PalindromeNumber</class>
     </Mapper>
+    <Mapper>
+        <order>10</order>
+        <name>Regular Expression Matching</name>
+        <class></class>
+    </Mapper>
 </Mappers>
