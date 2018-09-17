@@ -39,4 +39,9 @@
         <name>String to Integer (atoi)</name>
         <class>medium.StringConverInteger</class>
     </Mapper>
+    <Mapper>
+        <order>9</order>
+        <name>Palindrome Number</name>
+        <class>easy.PalindromeNumber</class>
+    </Mapper>
 </Mappers>
