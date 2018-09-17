@@ -34,18 +34,20 @@ public class ReverseIntegerTest {
     @Test
     public void testMaxInteger()  {
         int x = Integer.MAX_VALUE;
-        Assert.assertEquals(-321, reverse.reverse3(x));
+        Assert.assertEquals(0, reverse.reverse3(x));
     }
 
     @Test
     public void testMinInteger()  {
         int x = Integer.MIN_VALUE;
-        Assert.assertEquals(-321, reverse.reverse3(x));
+        Assert.assertEquals(0, reverse.reverse3(x));
     }
 
-/*    public static void main(String[] args) {
-        System.out.println(Math.pow(10, 2));
-    }*/
+    @Test
+    public void testMoreInteger()  {
+        int x = 1534236469;
+        Assert.assertEquals(0, reverse.reverse3(x));
+    }
 
 
 }

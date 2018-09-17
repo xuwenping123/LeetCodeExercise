@@ -48,12 +48,6 @@ public class ReverseInteger {
         if (flag == false) {
         	reverseInt = reverseInt * (-1);
         }
-/*        if(flag == true && reverseInt < 0) {
-           return 0; 
-        }
-        if(flag == false && reverseInt > 0) {
-            return 0;
-        }*/
         return reverseInt;
     }
 	
@@ -91,7 +85,7 @@ public class ReverseInteger {
 	}
 
 	/**
-	 * O(1)
+	 * O(log(N))
 	 * add 18-09-16
 	 * @param x
 	 * @return
@@ -102,7 +96,7 @@ public class ReverseInteger {
 		if (!flag) {
 			x *= (-1);
 		}
-		int value = 0;
+		long value = 0l;
 		int remainder;
 		int n = 0;
 		int temp = x;
@@ -113,13 +107,16 @@ public class ReverseInteger {
 		while (x > 0) {
 			remainder = x % 10;
 			if (flag) {
-				value = value + remainder * (int) Math.pow(10, --n);
+				value = value + remainder * (long) Math.pow(10, --n);
 			} else {
-				value = value - remainder * (int) Math.pow(10, --n);
+				value = value - remainder * (long) Math.pow(10, --n);
 			}
 			x = x / 10;
 		}
-		return value;
+		if (value < Integer.MIN_VALUE || value > Integer.MAX_VALUE) {
+			return 0;
+		}
+		return (int)value;
 	}
 
 }
