@@ -60,7 +60,35 @@ public class RegularExpressionMatch {
      * @return
      */
     public boolean isMatch(String s, String p) {
-        //TODO
+
+        return loopMatch(s, s.length() - 1, p, p.length() - 1);
+    }
+
+
+    public boolean loopMatch(String s, int i, String p, int j) {
+        if (j < 0) {
+            if (i < 0) {
+                return true;
+            }
+            return false;
+        }
+        if (p.charAt(j) == '*') {
+            // 比较 s[i] 与 p[j - 1]   判断 * 是否代替前一个元素
+            // if true 比较 s[i] 与 p[j - 2]   * 已经代替了一次，判断总共会代替几次
+            // if false * 没有代替，前一个元素出现 0 次
+            if (i >= 0 && (s.charAt(i) == p.charAt(j - 1) || p.charAt(j - 1) == '.')) {
+                if (loopMatch(s, i - 1, p, j)) {
+                    return true;
+                }
+            }
+            return loopMatch(s, i, p, j - 2);
+        }
+        if (i < 0) {
+            return false;
+        }
+        if (p.charAt(j) == '.' || p.charAt(j) == s.charAt(i)) {
+            return loopMatch(s, i - 1, p, j - 1);
+        }
         return false;
     }
 }
