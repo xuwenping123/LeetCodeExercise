@@ -1,5 +1,8 @@
 package hard;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.
  *
@@ -49,7 +52,15 @@ package hard;
  */
 public class RegularExpressionMatch {
 
+    /**
+     * can not solve
+     * <href>https://hk029.gitbooks.io/leetbook/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/010.%20Regular%20Expression%20Matching/010.%20Regular%20Expression%20Matching.html</href>
+     * @param s
+     * @param p
+     * @return
+     */
     public boolean isMatch(String s, String p) {
+        //TODO
         return false;
     }
 }
