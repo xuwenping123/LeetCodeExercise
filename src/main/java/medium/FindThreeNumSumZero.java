@@ -1,6 +1,7 @@
 package medium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -26,12 +27,36 @@ import java.util.List;
  */
 public class FindThreeNumSumZero {
 
+    /**
+     *
+     * @param nums
+     * @return
+     */
     public List<List<Integer>> threeSum(int[] nums) {
+        if (nums == null || nums.length < 3) {
+            return null;
+        }
+        Arrays.sort(nums);
+        int start = 0;
+        int mid, end;
+
+        return null;
+    }
+
+
+    /**
+     * O(n * n * n)
+     * 使用传统遍历，将不好解决重复性问题
+     * @param nums
+     * @return
+     */
+    public List<List<Integer>> threeSum2(int[] nums) {
         if (nums == null || nums.length < 3) {
             return null;
         }
         List<List<Integer>> lists = new ArrayList<List<Integer>>();
         List<Integer> list;
+        List<Integer> temp = new ArrayList<Integer>();
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 for (int k = j + 1; k < nums.length; k++) {
