@@ -59,4 +59,9 @@
         <name>Integer to Roman</name>
         <class>medium.IntegerToRoman</class>
     </Mapper>
+    <Mapper>
+        <order>13</order>
+        <name>Roman to Integer</name>
+        <class>easy.RomanToInteger</class>
+    </Mapper>
 </Mappers>
