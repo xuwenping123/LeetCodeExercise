@@ -69,4 +69,9 @@
         <name>Longest Common Prefix</name>
         <class>easy.LongestCommonPrefix</class>
     </Mapper>
+    <Mapper>
+        <order>15</order>
+        <name>3Sum</name>
+        <class>medium.FindThreeNumSumZero</class>
+    </Mapper>
 </Mappers>
