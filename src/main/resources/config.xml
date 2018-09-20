@@ -49,4 +49,9 @@
         <name>Regular Expression Matching</name>
         <class></class>
     </Mapper>
+    <Mapper>
+        <order>11</order>
+        <name>Container With Most Water</name>
+        <class>medium.ContainerWithMostWater</class>
+    </Mapper>
 </Mappers>
