@@ -54,4 +54,9 @@
         <name>Container With Most Water</name>
         <class>medium.ContainerWithMostWater</class>
     </Mapper>
+    <Mapper>
+        <order>12</order>
+        <name>Integer to Roman</name>
+        <class>medium.IntegerToRoman</class>
+    </Mapper>
 </Mappers>
