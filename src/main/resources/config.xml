@@ -64,4 +64,9 @@
         <name>Roman to Integer</name>
         <class>easy.RomanToInteger</class>
     </Mapper>
+    <Mapper>
+        <order>14</order>
+        <name>Longest Common Prefix</name>
+        <class>easy.LongestCommonPrefix</class>
+    </Mapper>
 </Mappers>
