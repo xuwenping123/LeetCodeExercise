@@ -1,5 +1,7 @@
 package medium;
 
+import easy.PalindromeNumber;
+
 import java.util.*;
 
 /**
@@ -25,46 +27,73 @@ import java.util.*;
 public class FindThreeNumSumZero {
 
     /**
-     *
+     * use three pos!
      * @param nums
      * @return
      */
     public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> lists = new ArrayList<List<Integer>>();
         if (nums == null || nums.length < 3) {
-            return null;
+            return lists;
         }
         Arrays.sort(nums);
-        int start = 0;
-        int mid, end;
-
-        return null;
+        int mid;
+        int end;
+        List<Integer> list;
+        for (int start = 0; start < nums.length - 2 && nums[start] <= 0; start++) {
+            if (start > 0 && nums[start] == nums[start - 1]) {
+                continue;
+            }
+            mid = start + 1;
+            end = nums.length - 1;
+            while (mid < end) {
+                if (nums[start] + nums[mid] + nums[end] == 0) {
+                    int tmp_mid = nums[mid],tmp_right= nums[end];
+                    list = new ArrayList<Integer>();
+                    list.add(nums[start]);
+                    list.add(nums[mid]);
+                    list.add(nums[end]);
+                    lists.add(list);
+                    while(mid < end && nums[++mid] == tmp_mid);
+                    while(mid < end && nums[--end] == tmp_right);
+                } else if (nums[start] + nums[mid] + nums[end] > 0) {
+                    end--;
+                } else {
+                    mid++;
+                }
+            }
+        }
+        return lists;
     }
 
 
     /**
      * O(n * n * n)
-     * 方法可用，但是超时    Time Limit Exceeded
      * @param nums
      * @return
      */
     public List<List<Integer>> threeSum2(int[] nums) {
+        // TODO  bug
         List<List<Integer>> lists = new ArrayList<List<Integer>>();
         if (nums == null || nums.length < 3) {
             return lists;
         }
         List<Integer> list;
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                for (int k = j + 1; k < nums.length; k++) {
+        // first sort
+        Arrays.sort(nums);
+        // a + b + c == 0
+        // sure a <= 0 and c >= 0
+        for (int i = 0; i < nums.length - 2 && nums[i] <= 0; i++) {
+            for (int j = i + 1; j < nums.length - 1; j++) {
+                for (int k = j + 1; k < nums.length && nums[k] >= 0; k++) {
                     if (nums[i] + nums[j] + nums[k] == 0) {
-                        list = new ArrayList<Integer>();
                         if (contains(lists, nums[i], nums[j], nums[k])) {
                             continue;
                         }
+                        list = new ArrayList<Integer>();
                         list.add(nums[i]);
                         list.add(nums[j]);
                         list.add(nums[k]);
-                        Collections.sort(list);
                         lists.add(list);
                     }
                 }
@@ -74,13 +103,8 @@ public class FindThreeNumSumZero {
     }
 
     public boolean contains(List<List<Integer>> lists, int a, int b, int c) {
-        List<Integer> test;
         for (List<Integer> list : lists) {
-            test = new ArrayList<Integer>(list);
-            test.remove(new Integer(a));
-            test.remove(new Integer(b));
-            test.remove(new Integer(c));
-            if (test.size() == 0) {
+            if (list.get(0).equals(a) && list.get(1).equals(b) && list.get(2).equals(c)) {
                 return true;
             }
         }
