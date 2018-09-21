@@ -1,9 +1,6 @@
 package medium;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Given an array nums of n integers, are there elements a, b, c in nums
@@ -46,22 +43,24 @@ public class FindThreeNumSumZero {
 
     /**
      * O(n * n * n)
-     * 使用传统遍历，将不好解决重复性问题
+     * 方法可用，但是超时    Time Limit Exceeded
      * @param nums
      * @return
      */
     public List<List<Integer>> threeSum2(int[] nums) {
-        if (nums == null || nums.length < 3) {
-            return null;
-        }
         List<List<Integer>> lists = new ArrayList<List<Integer>>();
+        if (nums == null || nums.length < 3) {
+            return lists;
+        }
         List<Integer> list;
-        List<Integer> temp = new ArrayList<Integer>();
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 for (int k = j + 1; k < nums.length; k++) {
                     if (nums[i] + nums[j] + nums[k] == 0) {
                         list = new ArrayList<Integer>();
+                        if (contains(lists, nums[i], nums[j], nums[k])) {
+                            continue;
+                        }
                         list.add(nums[i]);
                         list.add(nums[j]);
                         list.add(nums[k]);
@@ -72,5 +71,19 @@ public class FindThreeNumSumZero {
             }
         }
         return lists;
+    }
+
+    public boolean contains(List<List<Integer>> lists, int a, int b, int c) {
+        List<Integer> test;
+        for (List<Integer> list : lists) {
+            test = new ArrayList<Integer>(list);
+            test.remove(new Integer(a));
+            test.remove(new Integer(b));
+            test.remove(new Integer(c));
+            if (test.size() == 0) {
+                return true;
+            }
+        }
+        return false;
     }
 }
