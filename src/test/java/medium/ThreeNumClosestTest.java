@@ -40,4 +40,11 @@ public class ThreeNumClosestTest {
         int target = 1;
         Assert.assertEquals(0, run.threeSumClosest(nums, target));
     }
+
+    @Test
+    public void testThreeSumClosestError2() {
+        int[] nums = {-1, 0, 1, 1, 55};
+        int target = 3;
+        Assert.assertEquals(2, run.threeSumClosest(nums, target));
+    }
 }

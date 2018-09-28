@@ -38,14 +38,12 @@ public class ThreeNumClosest {
                     sum = nums[start] + nums[mid] + nums[end];
                     dif = target - sum;
                 }
-                if (target - (nums[start] + nums[mid] + nums[end]) < 0) {
-                    mid++;
-                }
-                if (target - (nums[start] + nums[mid] + nums[end]) > 0) {
-                    end--;
-                }
                 if (target == nums[start] + nums[mid] + nums[end]) {
                     return target;
+                } else if (target < nums[start] + nums[mid] + nums[end]) {
+                    end--;
+                }  else {
+                    mid++;
                 }
             }
             start++;

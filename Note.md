@@ -47,6 +47,7 @@
     medium.LongestSubstring
     medium.LongestPalSubString
     medium.ContainerWithMostWater
+    medium.ThreeNumClosest
     ```
 2. 数组合并
 	借助归并排序算法关于两个数组比较大小然后置于一数组的思想
