@@ -79,4 +79,9 @@
         <name>3Sum Closest</name>
         <class>medium.ThreeNumClosest</class>
     </Mapper>
+    <Mapper>
+        <order>17</order>
+        <name>Letter Combinations of a Phone Number</name>
+        <class></class>
+    </Mapper>
 </Mappers>
