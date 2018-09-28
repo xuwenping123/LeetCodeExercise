@@ -1,7 +1,5 @@
 package medium;
 
-import easy.PalindromeNumber;
-
 import java.util.*;
 
 /**

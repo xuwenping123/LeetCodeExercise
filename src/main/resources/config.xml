@@ -74,4 +74,9 @@
         <name>3Sum</name>
         <class>medium.FindThreeNumSumZero</class>
     </Mapper>
+    <Mapper>
+        <order>16</order>
+        <name>3Sum Closest</name>
+        <class>medium.ThreeNumClosest</class>
+    </Mapper>
 </Mappers>
