@@ -18,19 +18,39 @@ import java.util.Arrays;
 public class ThreeNumClosest {
 
     public int threeSumClosest(int[] nums, int target) {
-        int count = 0;
-        int dif = 0;
         if (nums == null || nums.length < 3) {
             return 0;
         }
+        int sum = 0;
+        int dif = 0;
         Arrays.sort(nums);
-        int order = Arrays.binarySearch(nums, target);
-        if (order < 0 || order >= nums.length) {
-
-        } else {
-
+        int start = 0;
+        int mid, end;
+        while (start < nums.length - 2) {
+            mid = start + 1;
+            end = nums.length - 1;
+            if (start == 0 && mid == 1 && end == nums.length - 1) {
+                sum = nums[start] + nums[mid] + nums[end];
+                dif = target - sum;
+            }
+            while (mid < end) {
+                if (Math.abs(target - (nums[start] + nums[mid] + nums[end])) < Math.abs(dif)) {
+                    sum = nums[start] + nums[mid] + nums[end];
+                    dif = target - sum;
+                }
+                if (target - (nums[start] + nums[mid] + nums[end]) < 0) {
+                    mid++;
+                }
+                if (target - (nums[start] + nums[mid] + nums[end]) > 0) {
+                    end--;
+                }
+                if (target == nums[start] + nums[mid] + nums[end]) {
+                    return target;
+                }
+            }
+            start++;
         }
-        return count;
+        return sum;
     }
 
     /**
