@@ -24,6 +24,12 @@ import java.util.List;
  */
 public class FourSum {
 
+    /**
+     * 参考 3Sum
+     * @param nums
+     * @param target
+     * @return
+     */
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (nums == null || nums.length < 4) {
@@ -47,14 +53,12 @@ public class FourSum {
                         list.add(nums[l]);
                         result.add(list);
                         while(k < l && nums[k] == nums[++k]);
-                        while(k < l && nums[l] == nums[--l]);
                     } else if (nums[i] + nums[j] + nums[k] + nums[l] > target) {
-                        l--;
+                        while(k < l && nums[l] == nums[--l]);
                     } else {
-                        k++;
+                        while(k < l && nums[k] == nums[++k]);
                     }
                 }
-                j++;
                 while (j < nums.length - 2 && nums[j] == nums[++j]);
             }
             while (i < nums.length - 3 && nums[i] == nums[++i]);
