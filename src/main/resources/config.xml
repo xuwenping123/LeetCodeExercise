@@ -94,4 +94,9 @@
         <name>Remove Nth Node From End of List</name>
         <class></class>
     </Mapper>
+    <Mapper>
+        <order>20</order>
+        <name>Valid Parentheses</name>
+        <class>easy.ValidParentheses</class>
+    </Mapper>
 </Mappers>
