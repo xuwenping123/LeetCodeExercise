@@ -104,4 +104,9 @@
         <name>Merge Two Sorted Lists</name>
         <class>easy.MergeTwoSortedLists</class>
     </Mapper>
+    <Mapper>
+        <order>22</order>
+        <name>Generate Parentheses</name>
+        <class>medium.GenerateParentheses</class>
+    </Mapper>
 </Mappers>
