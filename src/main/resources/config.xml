@@ -47,7 +47,7 @@
     <Mapper>
         <order>10</order>
         <name>Regular Expression Matching</name>
-        <class></class>
+        <class>hard.RegularExpressionMatch</class>
     </Mapper>
     <Mapper>
         <order>11</order>
@@ -82,7 +82,7 @@
     <Mapper>
         <order>17</order>
         <name>Letter Combinations of a Phone Number</name>
-        <class></class>
+        <class>LetterCombinPhoneNum</class>
     </Mapper>
     <Mapper>
         <order>18</order>
@@ -92,11 +92,16 @@
     <Mapper>
         <order>19</order>
         <name>Remove Nth Node From End of List</name>
-        <class></class>
+        <class>medium.RemoveEndNodeFromList</class>
     </Mapper>
     <Mapper>
         <order>20</order>
         <name>Valid Parentheses</name>
         <class>easy.ValidParentheses</class>
+    </Mapper>
+    <Mapper>
+        <order>21</order>
+        <name>Merge Two Sorted Lists</name>
+        <class>easy.MergeTwoSortedLists</class>
     </Mapper>
 </Mappers>
