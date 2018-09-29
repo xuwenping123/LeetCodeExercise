@@ -89,5 +89,9 @@
         <name>4Sum</name>
         <class>medium.FourSum</class>
     </Mapper>
-
+    <Mapper>
+        <order>19</order>
+        <name>Remove Nth Node From End of List</name>
+        <class></class>
+    </Mapper>
 </Mappers>
