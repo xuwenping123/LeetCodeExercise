@@ -114,4 +114,9 @@
         <name>Merge k Sorted Lists</name>
         <class>hard.MergeSortedLists</class>
     </Mapper>
+    <Mapper>
+        <order>24</order>
+        <name>Swap Nodes in Pairs</name>
+        <class></class>
+    </Mapper>
 </Mappers>
