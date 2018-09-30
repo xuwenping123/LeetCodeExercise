@@ -26,7 +26,14 @@
         x = x / 10;
     }
     ```
-3. 
+    
+3. 快速遍历链表
+    ```
+    while (head != null) {
+        System.out.print(head.val);
+        head = head.next;
+    }
+    ```
 
 ### 数据结构
 1. 数组
