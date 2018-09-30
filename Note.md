@@ -35,6 +35,14 @@
     }
     ```
 
+4. 链表插值
+    ```
+    ListNode tmp = node;
+    node.next = insertNode;
+    node = node.next;
+    node.next = tmp;
+    ```
+
 ### 数据结构
 1. 数组
 	数组是一种特殊的Map结构，下标索引为key，数组值为Value
