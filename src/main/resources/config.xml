@@ -109,4 +109,9 @@
         <name>Generate Parentheses</name>
         <class>medium.GenerateParentheses</class>
     </Mapper>
+    <Mapper>
+        <order>23</order>
+        <name>Merge k Sorted Lists</name>
+        <class>hard.MergeSortedLists</class>
+    </Mapper>
 </Mappers>
