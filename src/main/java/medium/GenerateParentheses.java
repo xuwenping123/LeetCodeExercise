@@ -1,7 +1,6 @@
 package medium;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 /**
  * Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
@@ -19,20 +18,28 @@ import java.util.List;
 public class GenerateParentheses {
 
     /**
-     * copy from
+     *
      * @param n
      * @return
      */
     public List<String> generateParenthesis(int n) {
-        List<String> ans = new ArrayList<String>();
-        if (n == 0) {
-            ans.add("");
-        } else {
-            for (int c = 0; c < n; ++c)
-                for (String left: generateParenthesis(c))
-                    for (String right: generateParenthesis(n-1-c))
-                        ans.add("(" + left + ")" + right);
+        List<String> result = new ArrayList<String>();
+        if (n <= 0) {
+            return result;
         }
-        return ans;
+        helper(result, "", n, n);
+        return result;
+    }
+
+    private void helper(List<String> result, String str, int left, int right) {
+        if (left < 0 || right < 0 || left > right) {
+            return;
+        }
+        if (left == 0 && right == 0) {
+            result.add(str);
+            return;
+        }
+        helper(result, str + "(", left - 1, right);
+        helper(result, str + ")", left, right - 1);
     }
 }
