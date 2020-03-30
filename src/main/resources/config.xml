@@ -124,4 +124,10 @@
         <name>Reverse Nodes in k-Group</name>
         <class></class>
     </Mapper>
+
+    <Mapper>
+        <order>415</order>
+        <name>Add Strings</name>
+        <class>easy.AddStrings</class>
+    </Mapper>
 </Mappers>
